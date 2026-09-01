@@ -1,7 +1,7 @@
 import { ArrowRight, Brain, Dumbbell, HeartPulse, Sparkles, TrendingUp, Utensils } from "lucide-react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Onboarding from "./pages/Onboarding";
-import Login from "./pages/Login"
+import Login from "./pages/login"
 import Signup from "./pages/Signup"
 import Dashboard from "./pages/Dashboard"
 import Workout from "./pages/Workout";

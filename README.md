@@ -1,16 +1,91 @@
-# React + Vite
+# FitAI
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+FitAI is a fitness and wellness web application built with React.js. The project is designed to help users get started with their fitness goals through personalized onboarding, workout planning, and nutrition tracking.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* Personalized user onboarding
+* Fitness goal selection
+* Workout planning
+* Nutrition tracking
+* Responsive interface for desktop and mobile
+* User-friendly dashboard
+* Fitness and wellness focused recommendations
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* React.js
+* JavaScript
+* HTML5
+* CSS3
+* Vite
 
-## Expanding the Oxlint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+### Prerequisites
+
+Make sure you have Node.js and npm installed.
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/vedangigholap45710/fitai.git
+```
+
+Go to the project folder:
+
+```bash
+cd fitai
+```
+
+Install the dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+The application will then be available on the local development URL shown in the terminal.
+
+## Project Structure
+
+```text
+fitai/
+├── public/
+├── src/
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+## What I Learned
+
+While working on FitAI, I worked with React components, application structure, responsive UI development, user input handling, and building a multi-page fitness application.
+
+The project also helped me understand how a frontend application is organized and deployed using a modern React development workflow.
+
+## Future Improvements
+
+Some areas I would like to improve further include:
+
+* More detailed progress tracking
+* Improved personalization
+* Additional nutrition insights
+* Better workout progress visualization
+* More comprehensive user data management
+
+## Live Demo
+
+[FitAI](https://fitai-own-957f.vercel.app/)
+
+## Status
+
+This project is currently under development and will continue to be improved as new features and refinements are added.

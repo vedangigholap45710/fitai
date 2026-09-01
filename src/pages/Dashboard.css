@@ -1,0 +1,871 @@
+/* =========================================================
+   FITAI DASHBOARD
+   ========================================================= */
+
+   .dashboard-page {
+    min-height: 100vh;
+    display: flex;
+    background: #080a09;
+    color: #e8ece8;
+    font-family: inherit;
+  }
+  
+  
+  /* =========================================================
+     SIDEBAR
+     ========================================================= */
+  
+  .dashboard-sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+  
+    width: 225px;
+  
+    display: flex;
+    flex-direction: column;
+  
+    padding: 27px 16px;
+  
+    background: #0c0f0d;
+    border-right: 1px solid #1c211e;
+  
+    z-index: 100;
+  }
+  
+  .dashboard-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  
+    padding: 0 10px;
+    margin-bottom: 48px;
+  
+    color: #eef2ed;
+  
+    font-size: 19px;
+    font-weight: 900;
+    letter-spacing: -0.8px;
+  }
+  
+  .dashboard-brand > span > span {
+    color: #c8ff3d;
+  }
+  
+  .dashboard-brand-icon {
+    width: 32px;
+    height: 32px;
+  
+    display: grid;
+    place-items: center;
+  
+    border-radius: 9px;
+  
+    background: #c8ff3d;
+    color: #090b09;
+  }
+  
+  .dashboard-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .dashboard-nav a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  
+    padding: 12px 13px;
+  
+    border: 1px solid transparent;
+    border-radius: 9px;
+  
+    color: #69726b;
+  
+    text-decoration: none;
+  
+    font-size: 10px;
+    font-weight: 700;
+  
+    transition: 0.2s ease;
+  }
+  
+  .dashboard-nav a:hover {
+    color: #d9ded9;
+    background: #111511;
+  }
+  
+  .dashboard-nav a.active {
+    color: #d9ff7a;
+    background: #141a11;
+    border-color: #293322;
+  }
+  
+  .dashboard-logout {
+    margin-top: auto;
+  
+    display: flex;
+    align-items: center;
+    gap: 11px;
+  
+    padding: 12px 13px;
+  
+    border: 0;
+    border-radius: 9px;
+  
+    background: transparent;
+  
+    color: #59625c;
+  
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 700;
+  
+    cursor: pointer;
+  
+    transition: 0.2s ease;
+  }
+  
+  .dashboard-logout:hover {
+    color: #d86d6d;
+    background: #15100f;
+  }
+  
+  
+  /* =========================================================
+     MAIN
+     ========================================================= */
+  
+  .dashboard-main {
+    width: calc(100% - 225px);
+  
+    margin-left: 225px;
+  
+    padding: 42px 46px 60px;
+  
+    overflow-x: hidden;
+  }
+  
+  
+  /* =========================================================
+     HEADER
+     ========================================================= */
+  
+  .dashboard-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  
+    gap: 30px;
+  
+    margin-bottom: 32px;
+  }
+  
+  .dashboard-eyebrow,
+  .card-eyebrow {
+    display: block;
+  
+    margin-bottom: 9px;
+  
+    color: #667067;
+  
+    font-size: 7px;
+    font-weight: 900;
+  
+    letter-spacing: 1.8px;
+  }
+  
+  .dashboard-header h1 {
+    margin: 0;
+  
+    color: #eef2ee;
+  
+    font-size: clamp(28px, 3vw, 40px);
+    font-weight: 850;
+  
+    line-height: 1;
+    letter-spacing: -1.8px;
+  }
+  
+  .dashboard-header h1 span {
+    color: #c8ff3d;
+  }
+  
+  .dashboard-header p {
+    margin: 11px 0 0;
+  
+    color: #59615b;
+  
+    font-size: 10px;
+  }
+  
+  .dashboard-date {
+    min-width: 115px;
+  
+    padding: 12px 15px;
+  
+    border: 1px solid #202621;
+    border-radius: 10px;
+  
+    background: #0c100d;
+  
+    text-align: right;
+  }
+  
+  .dashboard-date span {
+    display: block;
+  
+    margin-bottom: 5px;
+  
+    color: #4f584f;
+  
+    font-size: 6px;
+    font-weight: 900;
+  
+    letter-spacing: 1.5px;
+  }
+  
+  .dashboard-date strong {
+    color: #c8ff3d;
+  
+    font-size: 10px;
+  }
+  
+  
+  /* =========================================================
+     GOALS
+     ========================================================= */
+  
+  .dashboard-goals {
+    margin-bottom: 24px;
+  }
+  
+  .section-label {
+    margin-bottom: 10px;
+  
+    color: #4e574f;
+  
+    font-size: 7px;
+    font-weight: 900;
+  
+    letter-spacing: 1.6px;
+  }
+  
+  .goal-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+  
+  .goal-tag {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  
+    padding: 8px 11px;
+  
+    border: 1px solid #273022;
+    border-radius: 7px;
+  
+    background: #10150d;
+  
+    color: #b8c1b7;
+  
+    font-size: 8px;
+    font-weight: 700;
+  }
+  
+  .goal-tag svg {
+    color: #c8ff3d;
+  }
+  
+  
+  /* =========================================================
+     STAT CARDS
+     ========================================================= */
+  
+  .dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  
+    gap: 12px;
+  
+    margin-bottom: 14px;
+  }
+  
+  .stat-card {
+    min-height: 90px;
+  
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  
+    padding: 17px;
+  
+    border: 1px solid #1d231f;
+    border-radius: 12px;
+  
+    background: #0d110f;
+  }
+  
+  .stat-icon {
+    width: 38px;
+    height: 38px;
+  
+    flex-shrink: 0;
+  
+    display: grid;
+    place-items: center;
+  
+    border-radius: 9px;
+  
+    background: #151b11;
+  
+    color: #c8ff3d;
+  }
+  
+  .stat-card span {
+    display: block;
+  
+    margin-bottom: 5px;
+  
+    color: #525b54;
+  
+    font-size: 6px;
+    font-weight: 900;
+  
+    letter-spacing: 1.3px;
+  }
+  
+  .stat-card strong {
+    display: block;
+  
+    color: #dfe5df;
+  
+    font-size: 16px;
+    font-weight: 850;
+  }
+  
+  .stat-card small {
+    display: block;
+  
+    margin-top: 3px;
+  
+    color: #4e5750;
+  
+    font-size: 7px;
+  }
+  
+  
+  /* =========================================================
+     MAIN GRID
+     ========================================================= */
+  
+  .dashboard-grid {
+    display: grid;
+  
+    grid-template-columns: 1.35fr 1fr;
+  
+    gap: 14px;
+  }
+  
+  .dashboard-card {
+    position: relative;
+  
+    min-width: 0;
+  
+    padding: 22px;
+  
+    border: 1px solid #1d231f;
+    border-radius: 13px;
+  
+    background: #0d110f;
+  
+    overflow: hidden;
+  }
+  
+  .card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  
+    gap: 15px;
+  }
+  
+  .card-top > svg {
+    color: #5d695d;
+  }
+  
+  .card-top h2 {
+    margin: 0;
+  
+    color: #e3e8e3;
+  
+    font-size: 19px;
+    font-weight: 800;
+  
+    letter-spacing: -0.7px;
+  }
+  
+  .card-description {
+    max-width: 430px;
+  
+    margin: 15px 0 18px;
+  
+    color: #5a635c;
+  
+    font-size: 9px;
+    line-height: 1.7;
+  }
+  
+  
+  /* =========================================================
+     WORKOUT
+     ========================================================= */
+  
+  .workout-card {
+    min-height: 245px;
+  }
+  
+  .card-number {
+    color: #2b332c;
+  
+    font-size: 28px;
+    font-weight: 900;
+  
+    line-height: 1;
+  }
+  
+  .workout-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+  
+    margin-bottom: 20px;
+  }
+  
+  .workout-details div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  
+    color: #677067;
+  
+    font-size: 8px;
+  }
+  
+  .workout-details svg {
+    color: #9bb95b;
+  }
+  
+  
+  /* =========================================================
+     BUTTONS
+     ========================================================= */
+  
+  .card-button {
+    min-height: 39px;
+  
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+  
+    padding: 0 15px;
+  
+    border: 1px solid #c8ff3d;
+    border-radius: 7px;
+  
+    background: #c8ff3d;
+  
+    color: #080a08;
+  
+    font-family: inherit;
+  
+    font-size: 8px;
+    font-weight: 900;
+  
+    cursor: pointer;
+  
+    transition: 0.2s ease;
+  }
+  
+  .card-button:hover {
+    transform: translateY(-1px);
+  
+    box-shadow: 0 8px 25px rgba(200, 255, 61, 0.08);
+  }
+  
+  .card-button.secondary {
+    border-color: #293029;
+  
+    background: #151a16;
+  
+    color: #aeb7ae;
+  }
+  
+  .card-button.secondary:hover {
+    border-color: #46513f;
+    color: #c8ff3d;
+  }
+  
+  
+  /* =========================================================
+     NUTRITION
+     ========================================================= */
+  
+  .nutrition-card {
+    min-height: 245px;
+  }
+  
+  .nutrition-progress {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  
+    margin: 21px 0;
+  }
+  
+  .nutrition-progress-ring {
+    width: 92px;
+    height: 92px;
+  
+    flex-shrink: 0;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    border: 5px solid #1d2618;
+    border-top-color: #c8ff3d;
+    border-radius: 50%;
+  }
+  
+  .nutrition-progress-ring strong {
+    color: #e0e7df;
+  
+    font-size: 18px;
+    font-weight: 850;
+  }
+  
+  .nutrition-progress-ring span {
+    color: #505a52;
+  
+    font-size: 7px;
+  }
+  
+  .nutrition-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .nutrition-info div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .nutrition-info span {
+    width: 48px;
+  
+    color: #555f57;
+  
+    font-size: 8px;
+  }
+  
+  .nutrition-info strong {
+    color: #bdc7bd;
+  
+    font-size: 9px;
+  }
+  
+  
+  /* =========================================================
+     PROGRESS
+     ========================================================= */
+  
+  .progress-card {
+    min-height: 255px;
+  }
+  
+  .progress-bars {
+    height: 125px;
+  
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  
+    gap: 8px;
+  
+    margin-top: 22px;
+  }
+  
+  .progress-day {
+    height: 100%;
+  
+    flex: 1;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  
+    gap: 7px;
+  }
+  
+  .bar-container {
+    width: 100%;
+    max-width: 24px;
+  
+    height: 105px;
+  
+    display: flex;
+    align-items: flex-end;
+  
+    border-radius: 5px;
+  
+    background: #141916;
+  
+    overflow: hidden;
+  }
+  
+  .bar-fill {
+    width: 100%;
+  
+    min-height: 0;
+  
+    border-radius: 5px;
+  
+    background: #6f8e35;
+  }
+  
+  .progress-day span {
+    color: #4f5851;
+  
+    font-size: 7px;
+    font-weight: 800;
+  }
+  
+  .progress-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    margin-top: 17px;
+    padding-top: 13px;
+  
+    border-top: 1px solid #1b211d;
+  
+    color: #59625b;
+  
+    font-size: 8px;
+  }
+  
+  .progress-footer div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .progress-footer svg {
+    color: #8da957;
+  }
+  
+  .progress-footer strong {
+    color: #c8ff3d;
+  
+    font-size: 9px;
+  }
+  
+  
+  /* =========================================================
+     AI CARD
+     ========================================================= */
+  
+  .ai-card {
+    min-height: 255px;
+  
+    background:
+      radial-gradient(
+        circle at 90% 10%,
+        rgba(200, 255, 61, 0.06),
+        transparent 35%
+      ),
+      #0d110f;
+  }
+  
+  .ai-card-content {
+    max-width: 400px;
+  }
+  
+  .ai-icon {
+    width: 42px;
+    height: 42px;
+  
+    margin-bottom: 17px;
+  
+    display: grid;
+    place-items: center;
+  
+    border: 1px solid #2b3626;
+    border-radius: 11px;
+  
+    background: #131a10;
+  
+    color: #c8ff3d;
+  }
+  
+  .ai-card h2 {
+    margin: 0;
+  
+    color: #e3e8e3;
+  
+    font-size: 20px;
+    font-weight: 800;
+  
+    letter-spacing: -0.7px;
+  }
+  
+  .ai-card p {
+    max-width: 350px;
+  
+    margin: 11px 0 20px;
+  
+    color: #59635c;
+  
+    font-size: 9px;
+    line-height: 1.7;
+  }
+  
+  
+  /* =========================================================
+     MOBILE MENU
+     ========================================================= */
+  
+  .mobile-menu-button {
+    display: none;
+  }
+  
+  
+  /* =========================================================
+     RESPONSIVE
+     ========================================================= */
+  
+  @media (max-width: 1000px) {
+  
+    .dashboard-main {
+      padding: 35px 28px 50px;
+    }
+  
+    .dashboard-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .dashboard-stats {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .stat-card:last-child {
+      grid-column: 1 / -1;
+    }
+  }
+  
+  
+  @media (max-width: 700px) {
+  
+    .dashboard-sidebar {
+      transform: translateX(-100%);
+  
+      transition: transform 0.25s ease;
+    }
+  
+    .dashboard-sidebar.open {
+      transform: translateX(0);
+    }
+  
+    .dashboard-main {
+      width: 100%;
+  
+      margin-left: 0;
+  
+      padding: 75px 18px 40px;
+    }
+  
+    .mobile-menu-button {
+      position: fixed;
+      top: 18px;
+      left: 18px;
+  
+      width: 38px;
+      height: 38px;
+  
+      display: grid;
+      place-items: center;
+  
+      border: 1px solid #293029;
+      border-radius: 9px;
+  
+      background: #101411;
+  
+      color: #c8ff3d;
+  
+      z-index: 200;
+  
+      cursor: pointer;
+    }
+  
+    .dashboard-header {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  
+    .dashboard-date {
+      text-align: left;
+    }
+  
+    .dashboard-stats {
+      grid-template-columns: 1fr;
+    }
+  
+    .stat-card:last-child {
+      grid-column: auto;
+    }
+  
+    .dashboard-header h1 {
+      font-size: 31px;
+    }
+  }
+  
+  
+  @media (max-width: 450px) {
+  
+    .dashboard-main {
+      padding-left: 14px;
+      padding-right: 14px;
+    }
+  
+    .dashboard-card {
+      padding: 18px;
+    }
+  
+    .workout-details {
+      gap: 10px;
+    }
+  
+    .nutrition-progress {
+      gap: 17px;
+    }
+  
+    .nutrition-progress-ring {
+      width: 78px;
+      height: 78px;
+    }
+  
+    .nutrition-progress-ring strong {
+      font-size: 16px;
+    }
+  }
